@@ -46,6 +46,10 @@ li{
     margin: 5px 0;
 }
 
+li:hover{
+    background-color: white;
+}
+
 .input_zone{
     margin-bottom: 2rem;
 }
@@ -64,8 +68,13 @@ li{
     margin-right: 1rem;
 }
 
+.line{
+    text-decoration: line-through;
+}
+
 @media screen and (max-width: 412px) {
     .container {
       width: 400px;
     }
   }
+

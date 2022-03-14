@@ -27,7 +27,14 @@ const app = new Vue({
             this.arrayToDo.push(this.newTodo = {nome: this.newTodo 
             , done: false});
             this.newTodo='';
-        }
+        },
 
+        dDone(element) {
+            if(element.done == false){
+            element.done = true;
+            } else {
+                element.done = false;
+            }
+        },
     }
 })    

@@ -20,7 +20,7 @@
         </div>
         <div class="container">
             <ul>
-                <li v-for="(element, index) in arrayToDo">
+                <li  v-for="(element, index) in arrayToDo" @click="dDone(element)" :class="element.done==true ? 'line' :''">
                     {{ element.nome }}
                     <button @click="removeTodo(index)" class="remove_todo">X</button>
                 </li>
