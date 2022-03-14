@@ -12,17 +12,17 @@
 </head>
 
 <body>
-    
+
     <div id="root">
         <div class="input_zone">
-            <input type="text" name="todo" id="todo" placeholder="Nuovo Todo">
-            <button class="add_todo">Aggiungi</button>
+            <input v-model="newTodo" type="text" name="todo" id="todo" placeholder="Nuovo Todo">
+            <button @click="addTodo()" class="add_todo">Aggiungi</button>
         </div>
         <div class="container">
             <ul>
                 <li v-for="(element, index) in arrayToDo">
                     {{ element.nome }}
-                    <button class="remove_todo">X</button>
+                    <button @click="removeTodo(index)" class="remove_todo">X</button>
                 </li>
             </ul>
         </div>

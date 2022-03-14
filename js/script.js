@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
+        newTodo:'',
         arrayToDo: [
             {
                 nome: 'fare i compiti',
@@ -21,6 +22,12 @@ const app = new Vue({
         removeTodo(index) {
             this.arrayToDo.splice(index, 1)
         },
+
+        addTodo() {
+            this.arrayToDo.push(this.newTodo = {nome: this.newTodo 
+            , done: false});
+            this.newTodo='';
+        }
 
     }
 })    
