@@ -15,13 +15,14 @@
 
     <div id="root">
         <div class="input_zone">
-            <input v-on:keyup.enter="addTodo" v-model="newTodo" type="text" name="todo" id="todo" placeholder="Nuovo Todo">
+            <input v-on:keyup.enter="addTodo" v-model="newTodo" type="text" name="todo" id="todo"
+                placeholder="Nuovo Todo">
             <button @click="addTodo()" class="add_todo">Aggiungi</button>
         </div>
         <div class="container">
             <ul>
-                <li  v-for="(element, index) in arrayToDo" @dblclick="dDone(element)" :class="element.done==true ? 'line' :''">
-                    {{ element.nome }}
+                <li v-for="(element, index) in arrayToDo">
+                    <div class="text" @click="dDone(element)" :class="element.done==true ? 'line' :''">{{ element.nome }}</div>
                     <button @click="removeTodo(index)" class="remove_todo">X</button>
                 </li>
             </ul>

@@ -46,6 +46,10 @@ li{
     margin: 5px 0;
 }
 
+.text{
+    flex-grow: 1;
+}
+
 li:hover{
     background-color: white;
 }

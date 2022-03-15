@@ -24,8 +24,9 @@ const app = new Vue({
         },
 
         addTodo() {
-            this.arrayToDo.push(this.newTodo = {nome: this.newTodo 
-            , done: false});
+            if(this.newTodo.trim() != ''){
+            this.arrayToDo.push(this.newTodo = {nome: this.newTodo.trim() 
+            , done: false});}
             this.newTodo='';
         },
 
